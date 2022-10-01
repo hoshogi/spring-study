@@ -9,6 +9,15 @@ import javax.persistence.Table;
 //@Table(name = "User")
 public class Member {
 
+    // JPA는 Entity에 기본 생성자가 필요하다
+    public Member() {
+    }
+
+    public Member(Long id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
     @Id
     private Long id;
 
